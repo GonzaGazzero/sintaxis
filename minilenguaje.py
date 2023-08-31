@@ -3,7 +3,7 @@ def validar_variable(nombre_variable):
     conjunto1 = {"abcdefghijklmnopqrstuvwxyz"}
     conjunto2 = {"0123456789-_"}
     conjunto3 = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"}
-    
+    #definir reglas
 
 # Mini lenguaje interactivo
 while True:
