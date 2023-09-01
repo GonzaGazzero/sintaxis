@@ -49,4 +49,4 @@ while True:
 # variable = '-Autos_rojos-;'
 # print(variable[-2:-1:])
 
-#rasin botonnnn
+#riber a la b
