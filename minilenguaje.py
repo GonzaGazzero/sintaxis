@@ -2,11 +2,11 @@
 def validar_variable(variable):
     fallos=str('')
     conjunto1 = str("abcdefghijklmnopqrstuvwxyz")
-    conjunto2 = str("0123456789-_")
+    conjunto2 = str("0123456789-_;")
     conjunto3 = str("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
     #1 nombre de la variable empieza con guion (-)
-    if variable[0:1]!= '-': fallos = fallos + 'regla 1,'
+    if variable[0:1] != '-': fallos = fallos + 'regla 1,'
 
     #2 no puede contener espacios
     for x in range(len(variable)):
