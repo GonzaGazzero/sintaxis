@@ -31,8 +31,21 @@ def validar_variable(variable):
     #8 en lugar de un espacio debe haber _
     
     #9 despues de - debe seguir letra mayuscula
+    bandera = False
+    if variable[0:1:] == '-':
+        for x in range(len(conjunto3)):
+            if variable[1:2:] == conjunto3[x:x+1:]:
+                bandera = True
+    if bandera == False: fallos = fallos + 'regla 9,'
     
     #10 despues del guion _ debe seguir letra mayuscula
+    bandera = False
+    for x in range(len(variable)):
+        if variable[x:x+1:] == '_':
+            for m in range(len(conjunto3)):
+                if variable[x+1:x+2:] == conjunto3[m:m+1:]:
+                    bandera = True
+            if bandera == False: fallos = fallos + 'regla 10,'
     
     return fallos
 
@@ -48,5 +61,3 @@ while True:
 
 # variable = '-Autos_rojos-;'
 # print(variable[-2:-1:])
-
-#riber a la b
