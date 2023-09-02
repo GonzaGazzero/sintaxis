@@ -22,13 +22,13 @@ def validar_variable(variable):
     #5 no puede terminar con _ -
     if variable[-2:-1:]=='-' or variable[-2:-1:]=='_': fallos = fallos + 'regla 5,'
     
-    #6 la variable debe contener al menos dos conjuntos
+    #6 La variable no podrá contener más de 3 números
     
     #7 no puede comenzar con numero
     for x in range(9):
         if variable[1:2] == conjunto2[x:x+1]: fallos = fallos + 'regla 7,'
     
-    #8 en lugar de un espacio debe haber _
+    #8 La variable solo debe estar conformada por los conjuntos predefinidos
     
     #9 despues de - debe seguir letra mayuscula
     bandera = False
