@@ -35,7 +35,19 @@ def validar_variable(variable):
         if variable[1:2] == conjunto2[x:x+1]: fallos = fallos + 'regla 7,'
     
     #8 La variable solo debe estar conformada por los conjuntos predefinidos
-    
+    cont_conjuntos = 0
+    for x in range(len(variable)):
+        for l in range(len(conjunto1)):
+            if variable[x:x+1:] == conjunto1[l:l+1:]:
+                cont_conjuntos += 1
+        for m in range(len(conjunto2)):
+            if variable[x:x+1:] == conjunto2[m:m+1:]:
+                cont_conjuntos += 1
+        for k in range(len(conjunto3)):
+            if variable[x:x+1:] == conjunto3[k:k+1:]:
+                cont_conjuntos += 1
+    if cont_conjuntos != len(variable): fallos = fallos + 'regla 8,'
+
     #9 despues del - de incio debe seguir letra mayuscula
     bandera = False
     if variable[0:1:] == '-':
