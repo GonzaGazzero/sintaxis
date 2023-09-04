@@ -68,14 +68,14 @@ def validar_variable(variable):
     return fallos
 
 while True:
-    nombre = str(input("Ingrese el nombre de la variable (o escriba 'salir' para salir): "))
+    nombre = str(input("\nIngrese el nombre de la variable \n(escriba 'reglas' para conocer las reglas o 'salir' para salir): "))
     
     if nombre.lower() == "salir":
         break
-    
-    resultado=validar_variable(nombre)
-    if resultado=='':print ('variable valida')
-    else: print('variable no valida', resultado)
+    elif nombre.lower() =="reglas":
+        print('Regla 1: "nombre de la variable empieza con guion (-)" \nRegla 2: "no puede contener espacios" \nRegla 3: "debe terminar con (;)" \nRegla 4: "long max 30 caract y min 3" \nRegla 5: "no puede terminar con (_) (-)" \nRegla 6: "La variable no podrá contener más de 3 números" \nRegla 7: "no puede comenzar con numero" \nRegla 8: "La variable solo debe estar conformada por los conjuntos predefinidos" \nRegla 9: "despues del - de incio debe seguir letra mayuscula" \nRegla 10: "despues del guion (_) debe seguir letra mayuscula" \n')
+    else:
+        resultado=validar_variable(nombre)
+        if resultado=='':print ('variable valida')
+        else: print('variable no valida', resultado)
 
-# variable = '-Autos_rojos-;'
-# print(variable[-2:-1:])
