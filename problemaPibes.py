@@ -16,9 +16,6 @@ def noalfabeto(alfabeto,palabra):
 alfabeto = input("Ingrese el alfabeto utilizado (sin espacios): ")
 palabra = input("Ingrese la palabra a permutar: ")
 
-
-
-
 nocaract = noalfabeto(alfabeto,palabra)
 nueva_palabra = str('')
 for i in range(len(nocaract)):
@@ -26,9 +23,12 @@ for i in range(len(nocaract)):
         nueva_palabra = palabra.replace(nocaract[i],"")
     else: nueva_palabra = nueva_palabra.replace(nocaract[i],"")
 
+
 print('los caracteres no pertenecientes son: ' + nocaract)
 
-permutaciones = list(itertools.permutations(nueva_palabra))
+if nueva_palabra==(''):
+    permutaciones = list(itertools.permutations(palabra))
+else: permutaciones = list(itertools.permutations(nueva_palabra))
 
 for i,p in enumerate(permutaciones):
     print(str(i + 1) + " - " + "".join(p))
